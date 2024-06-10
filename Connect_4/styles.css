@@ -1,0 +1,70 @@
+* { 
+    font-family: monospace;
+}
+
+body{ 
+    height: 100vh;
+    font-size: clamp(1.5rem, 3vw, 3rem); 
+    overflow: hidden;
+}
+
+.scores { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: clamp(1rem, 5vw, 5rem);
+    margin-bottom: 4vh;
+}
+
+.player1_container, .player2_container, .tie { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode span:hover {
+    color: silver;
+    cursor: pointer;
+}
+
+
+.coins { 
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    column-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    width: fit-content; 
+    margin: 0 auto;
+}
+.coins .cell { 
+    border: 1px solid white;
+}
+
+.board { 
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-template-rows: repeat(6, auto);
+    row-gap: 1rem;
+    column-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    width: fit-content; 
+    padding: 0.8rem;
+    background-color: blue;
+    margin: 1vh auto;
+    border: 1px solid black;
+    border-radius: 2%;
+}
+
+.cell { 
+    display: flex;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: clamp(25px, 4.5vw, 180px);
+    height: clamp(25px, 4.5vw, 180px);
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
